@@ -1,6 +1,7 @@
 const input = require('readline-sync');
 let str = "LaunchCode";
 let newstr = "";
+
 let print = function (str) {
     console.log(`${str}\n `)}
 
