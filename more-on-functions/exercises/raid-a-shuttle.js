@@ -25,9 +25,18 @@ console.log("Fuel level: " + checkFuel(fuelLevel));
 console.log("Hold status: " + holdStatus(cargoHold));
 
 /* Steal some fuel from the shuttle:
- * /
+ */
  
 //a). Define an anonymous function and set it equal to a variable with a normal, non-suspicious name. The function takes one parameter. This will be the fuel level on the shuttle.
+let stealFuel = function(n) {
+  
+  if (fuelStatus(n-1) !== fuelStatus(fuelLevel)) {
+    return n;
+  }
+  
+   return stealFuel(n-=1);
+  
+};
 
 //b). You must siphon off fuel without alerting the TAs. Inside your function, you want to reduce the fuel level as much as possible WITHOUT changing the color returned by the checkFuel function.
 
@@ -54,4 +63,7 @@ console.log("Hold status: " + holdStatus(cargoHold));
 //b). Call your anonymous fuel and cargo functions from within irs.
 
 //c). Use a template literal to return, "Raided _____ kg of fuel from the tanks, and stole ____ and ____ from the cargo hold."
-
+*/
+let logCargo = function(arry) {
+  
+};

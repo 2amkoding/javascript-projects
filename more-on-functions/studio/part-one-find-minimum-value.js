@@ -7,4 +7,25 @@ let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
 
 //Using one of the test arrays as the argument, call your function inside the console.log statement below.
 
-console.log(/* your code here */);
+
+let sortNumbersInArray = function(arry) {
+    arry.sort(function(a,b) {
+    return a- b;
+})
+    return arry[0];
+};
+//console.log(sortNumbersInArray(nums1));
+
+let ratherUseRecursion = function(ar) {
+    let a = ar[0];
+        for (let i = 0; i<ar.length; i++) {
+            if (a > ar[i]) {
+                a = ar[i];
+            }
+        }
+        return a
+};
+
+
+console.log(ratherUseRecursion(nums3));
+console.log(findMinWhile(nums1))
