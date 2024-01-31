@@ -22,8 +22,8 @@ console.log(reverseCharacters(testString));
 // 4. Return the reversed number.
 // 5. Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next exercise.
 function reverseAnyCharacter (str) {
-    if (str === Number(str)) {
-      return  reverseCharacters(str);
+    if (isNaN(str === false)) {
+        String(str);
     }
     return reverseCharacters(str);
 }
