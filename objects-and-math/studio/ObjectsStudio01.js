@@ -1,11 +1,21 @@
 // Code your selectRandomEntry function here:
-
-
+function selectRandomEntry(howMany) {
+  let selection = [];
+  let index;
+    while (selection.length < howMany) {
+      index = Math.floor(Math.random()*(idNumbers.length));
+        if(selection.includes(idNumbers)) {
+          index = index
+        }
+      selection.push(idNumbers[index]);
+  }
+return selection;
+}
 // Code your buildCrewArray function here:
 
 
 let idNumbers = [291, 414, 503, 599, 796, 890];
-
+//console.log(selectRandomEntry(3))
 // Here are the candidates and the 'animals' array:
 let candidateA = {
   'name':'Gordon Shumway',
