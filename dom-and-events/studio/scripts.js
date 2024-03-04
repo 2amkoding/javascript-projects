@@ -7,6 +7,12 @@ const spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
 const land = document.getElementById("landing"); 
 const missionAbort = document.getElementById("missionAbort");
 
+const rocket = document.getElementById("rocket");
+const down = document.getElementById("down");
+const up = document.getElementById("up");
+const left = document.getElementById("left");
+const right = document.getElementById("right");
+
 takeoff.addEventListener('click', event =>{
     let response  =window.confirm("Confirm that the shuttle is ready for takeoff.");
     
@@ -35,6 +41,11 @@ missionAbort.addEventListener('click', event =>{
         shuttleBackground.style.backgroundColor = "red";
         spaceShuttleHeight.innerHTML = 0;
     }
+});
+
+up.addEventListener('click', event =>{
+    
+    rocket.top = rocket.top-10
 })
 
 }
