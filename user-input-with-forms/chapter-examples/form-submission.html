@@ -13,9 +13,22 @@
       }
     </style>
   </head>
+  <script>
+    window.addEventListener("load", function*({
+      let form = document.querySelector("form");
+      form.addEventListener("submit", function(event){
+      let usernameInput = document.querySelector("input[name=username]");
+        alert("username: " + usernameInput.value);
+      let teamName = document.querySelector("input[name=team]");
+      if (usernameInput.value === "" || teamName.value === "") {
+        alert("All fields are required");
+      }
+      });
+    });
+  </script>
   <body>
     <!-- Form will use default action value and submit form to current page.  -->
-    <form action="">
+    <form method="POST" action="https://handlers.education.launchcode.org/request-parrot">
       <label>Username <input type="text" name="username"></label>
       <label>Team Name <input type="text" name="team">
       </label>
